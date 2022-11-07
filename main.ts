@@ -17,7 +17,8 @@ function drawGrid () {
                     7 7 7 7 7 7 7 7 7 7 
                     7 7 7 7 7 7 7 7 7 7 
                     `, SpriteKind.Player)
-                gridSprite.setPosition(currentX, currentY)
+                gridSprite.left = currentX
+                gridSprite.top = currentY
                 gridSprites.push(gridSprite)
             }
             currentX += 10
@@ -31,9 +32,9 @@ let currentY = 0
 let gridSprites: Sprite[] = []
 let grid: number[][] = []
 let rowTemplate = [
-0,
 1,
-0,
+1,
+1,
 0,
 0,
 0,
